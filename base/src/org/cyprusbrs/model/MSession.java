@@ -24,6 +24,7 @@ import java.util.logging.Level;
 
 import org.cyprusbrs.Cyprus;
 import org.cyprusbrs.util.CCache;
+import org.cyprusbrs.util.CLogger;
 import org.cyprusbrs.util.Env;
 import org.cyprusbrs.util.Ini;
 import org.cyprusbrs.util.TimeUtil;
@@ -46,6 +47,8 @@ public class MSession extends X_AD_Session
 	 */
 	private static final long serialVersionUID = 480745219310430126L;
 
+	// Added by Mukesh @20230617 to create static logger
+	public static CLogger mSessionLogger=CLogger.getCLogger(MSession.class);
 
 	/**
 	 * 	Get existing or create local session
@@ -68,6 +71,16 @@ public class MSession extends X_AD_Session
 			}
 			s_sessions.put(AD_Session_ID, session);
 		}
+		
+		// updated by Mukesh @20230617 according to VA
+		if(session!=null && session.isProcessed())
+		{
+			s_sessions.remove(AD_Session_ID);
+			mSessionLogger.log(Level.WARNING, "Session Processed : "+session);
+			session=null;
+		}
+		// End of the code
+		
 		// Create New
 		if (session == null && createNew)
 		{

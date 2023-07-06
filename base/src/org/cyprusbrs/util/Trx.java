@@ -220,13 +220,30 @@ public class Trx implements VetoableChangeListener
 	 */
 	public boolean start()
 	{
-		if (m_active)
-		{
-			log.warning("Trx in progress " + m_trxName);
-			return false;
-		}
-		m_active = true;
-		m_startTime = System.currentTimeMillis();
+		// m_connection = getConnection();    //Get the appropriate connection object
+        if (m_active)
+        {
+            log.warning("Trx in progress " + m_trxName + " - " + getTrxName());
+            return false;
+        }
+        m_active = true;
+        try
+        {
+        	if (m_connection != null)
+        	{	
+        		if (m_connection.isClosed())
+        		{
+        			m_connection = getConnection();
+        		}
+        	}
+            log.info("**Start** " + getTrxName());
+        }
+        catch (Exception e)
+        {
+            log.log(Level.SEVERE, m_trxName, e);
+            m_active = false;
+            return false;
+        }
 		return true;
 	}	//	startTrx
 
@@ -257,10 +274,12 @@ public class Trx implements VetoableChangeListener
 		//local
 		try
 		{
-			if (m_connection != null)
+			if (m_connection != null && s_cache.get(getTrxName())!=null && s_cache.get(getTrxName()).isActive()) /// add trx and trx connection
+			// if (m_connection != null)
 			{
 				m_connection.rollback();
-				log.info ("**** " + m_trxName);
+				s_cache.get(getTrxName()).close();
+				log.info ("**rollback** " + m_trxName);
 				m_active = false;
 				return true;
 			}
@@ -326,10 +345,11 @@ public class Trx implements VetoableChangeListener
 		//local
 		try
 		{
-			if (m_connection != null)
+			if (m_connection != null && s_cache.get(getTrxName())!=null && s_cache.get(getTrxName()).isActive()) /// add trx and trx connection
+			// if (m_connection != null)			/// add trx and trx connection
 			{
 				m_connection.commit();
-				log.info ("**** " + m_trxName);
+				log.info ("**Commit** " + m_trxName);
 				m_active = false;
 				return true;
 			}
@@ -383,7 +403,11 @@ public class Trx implements VetoableChangeListener
 		//	Close Connection
 		try
 		{
+			if(m_connection!=null)
 			m_connection.close();
+			
+			if(s_cache.get(getTrxName())!=null)
+			s_cache.get(getTrxName()).close();
 		}
 		catch (SQLException e)
 		{

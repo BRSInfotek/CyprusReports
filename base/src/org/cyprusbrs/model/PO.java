@@ -2156,6 +2156,9 @@ public abstract class PO
 				savepoint = null;
 				trx = null;
 			}
+		// Added by Mukesh 20230622
+		if(trx!=null)
+			trx.close();
 		}
 	}	//	save
 
