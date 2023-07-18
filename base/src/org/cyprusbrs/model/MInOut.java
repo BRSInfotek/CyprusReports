@@ -408,6 +408,56 @@ public class MInOut extends X_M_InOut implements DocAction
 	}	//	MInOut
 
 	/**
+	 * 
+	 * @param mrma
+	 * @param C_DocTypeShipment_ID
+	 * @param movementDate
+	 * New Method created by Mukesh to create Customer return from RMA
+	 */
+	public MInOut (MRMA mrma, int C_DocTypeReturn_ID, Timestamp movementDate)
+	{
+		this (mrma.getCtx(), 0, mrma.get_TrxName());
+		setClientOrg(mrma);
+		
+		if(mrma.getInOut_ID()==0)
+			throw new IllegalStateException("Shipment Id is not exist");	
+		MInOut shipment=new MInOut(getCtx(), mrma.getInOut_ID(), get_TrxName());
+		setC_BPartner_ID (shipment.getC_BPartner_ID());
+		setC_BPartner_Location_ID (shipment.getC_BPartner_Location_ID());	//	shipment address
+		setAD_User_ID(shipment.getAD_User_ID());
+		//
+		setM_Warehouse_ID (shipment.getM_Warehouse_ID());
+		setIsSOTrx (mrma.isSOTrx());
+		setM_RMA_ID(mrma.getM_RMA_ID());
+		
+		if (C_DocTypeReturn_ID == 0)
+			C_DocTypeReturn_ID = DB.getSQLValue(null,
+				"SELECT C_DocTypeShipment_ID FROM C_DocType WHERE C_DocType_ID=?",
+				mrma.getC_DocType_ID());
+		setC_DocType_ID (C_DocTypeReturn_ID);
+
+		// patch suggested by Armen
+		// setMovementType (mrma.isSOTrx() ? MOVEMENTTYPE_CustomerShipment : MOVEMENTTYPE_VendorReceipts);
+		String movementTypeShipment = null;
+		MDocType dtShipment = new MDocType(mrma.getCtx(), C_DocTypeReturn_ID, mrma.get_TrxName()); 
+		if (dtShipment.getDocBaseType().equals(MDocType.DOCBASETYPE_MaterialDelivery)) 
+			movementTypeShipment = dtShipment.isSOTrx() ? MOVEMENTTYPE_CustomerShipment : MOVEMENTTYPE_VendorReturns; 
+		else if (dtShipment.getDocBaseType().equals(MDocType.DOCBASETYPE_MaterialReceipt)) 
+			movementTypeShipment = dtShipment.isSOTrx() ? MOVEMENTTYPE_CustomerReturns : MOVEMENTTYPE_VendorReceipts;  
+		setMovementType (movementTypeShipment); 
+		
+		//	Default - Today
+		if (movementDate != null)
+			setMovementDate (movementDate);
+		setDateAcct (getMovementDate());
+
+		//	Copy from mrma
+		setSalesRep_ID(mrma.getSalesRep_ID());
+		setDescription(mrma.getDescription());
+	}	//	MInOut
+	
+	
+	/**
 	 * 	Invoice Constructor - create header only
 	 *	@param invoice invoice
 	 *	@param C_DocTypeShipment_ID document type or 0

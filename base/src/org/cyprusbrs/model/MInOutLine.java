@@ -211,6 +211,48 @@ public class MInOutLine extends X_M_InOutLine
 		setUser2_ID(oLine.getUser2_ID());
 	}	//	setOrderLine
 
+	
+	/**
+	 * 	Set Order Line.
+	 * 	Does not set Quantity!
+	 *	@param oLine order line
+	 *	@param M_Locator_ID locator
+	 * 	@param Qty used only to find suitable locator
+	 */
+	public void setRMALine (MRMALine oLine, int M_Locator_ID, BigDecimal Qty)
+	{
+		setM_RMALine_ID(oLine.getM_RMALine_ID());
+		setLine(oLine.getLine());
+		setC_UOM_ID(oLine.getC_UOM_ID());
+		setQtyEntered(Qty);
+		MProduct product = new MProduct(getCtx(), oLine.getM_Product_ID(), get_TrxName());
+		if (product != null)
+		{
+			setM_Product_ID(oLine.getM_Product_ID());
+			setM_AttributeSetInstance_ID(oLine.getM_AttributeSetInstance_ID());
+			//
+			if (product.isItem())
+			{
+				if (M_Locator_ID == 0)
+					setM_Locator_ID(Qty);	//	requires warehouse, product, asi
+				else
+					setM_Locator_ID(M_Locator_ID);
+			}
+			else
+				set_ValueNoCheck("M_Locator_ID", null);
+		}
+		setC_Charge_ID(oLine.getC_Charge_ID());
+		setDescription(oLine.getDescription());
+		//
+		setC_Project_ID(oLine.getC_Project_ID());
+		setC_ProjectPhase_ID(oLine.getC_ProjectPhase_ID());
+		setC_ProjectTask_ID(oLine.getC_ProjectTask_ID());
+		setC_Activity_ID(oLine.getC_Activity_ID());
+		setC_Campaign_ID(oLine.getC_Campaign_ID());
+		setAD_OrgTrx_ID(oLine.getAD_OrgTrx_ID());
+		setUser1_ID(oLine.getUser1_ID());
+		setUser2_ID(oLine.getUser2_ID());
+	}	//	setOrderLine
 	/**
 	 * 	Set Invoice Line.
 	 * 	Does not set Quantity!
