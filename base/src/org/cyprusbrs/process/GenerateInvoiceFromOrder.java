@@ -2,6 +2,7 @@ package org.cyprusbrs.process;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.logging.Level;
 
 import org.cyprusbrs.model.MDocType;
 import org.cyprusbrs.model.MInvoice;
@@ -18,6 +19,11 @@ public class GenerateInvoiceFromOrder extends SvrProcess {
 	/** Movement Date			*/
 	private Timestamp	m_movementDate = null;
 	
+	/** The date to calculate the days due from			*/
+	private Timestamp	p_DateInvoiced = null;
+	
+	private String vendorInvoiceNumber=null;
+	
 	@Override
 	protected void prepare() {
 		
@@ -26,7 +32,19 @@ public class GenerateInvoiceFromOrder extends SvrProcess {
 		m_movementDate = Env.getContextAsDate(getCtx(), "#Date");
 		if (m_movementDate == null)
 			m_movementDate = new Timestamp(System.currentTimeMillis());
-		
+		ProcessInfoParameter[] para = getParameter();
+		for (int i = 0; i < para.length; i++)
+		{
+			String name = para[i].getParameterName();
+			if (para[i].getParameter() == null)
+				;
+			else if (name.equals("DocumentNo"))
+				vendorInvoiceNumber = para[i].getParameter().toString();
+			else if (name.equals("DateInvoiced"))
+				p_DateInvoiced = (Timestamp)para[i].getParameter();
+			else
+				log.log(Level.SEVERE, "Unknown Parameter: " + name);
+		}
 	}
 
 	@Override
@@ -69,6 +87,20 @@ public class GenerateInvoiceFromOrder extends SvrProcess {
 				m_Invoice.setC_BPartner_ID(orderLine.getC_BPartner_ID());
 			if (order.getC_BPartner_Location_ID() != orderLine.getC_BPartner_Location_ID())
 				m_Invoice.setC_BPartner_Location_ID(orderLine.getC_BPartner_Location_ID());
+			// Updated the code as discussed with Surya
+			/**
+			 * When click on the 'Generate Invoice to Vendor'  button the system will ask the couple of mandatory parameter for generating the AP Invoice as follows:
+				1. Vendor Invoice Number
+				2. Invoice Date
+			 *@author Mukesh
+			 *@Date 20230719
+			 */
+			if(vendorInvoiceNumber!=null && vendorInvoiceNumber.length()>0)
+				m_Invoice.setDocumentNo(vendorInvoiceNumber);
+			if(p_DateInvoiced!=null)
+				m_Invoice.setDateInvoiced(p_DateInvoiced);
+			//End of the code
+			
 			if (!m_Invoice.save())
 				throw new IllegalStateException("Could not create Shipment");
 		}
