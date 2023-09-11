@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="EmployeeLedgerReport" pageWidth="1191" pageHeight="842" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="86901851-ef9a-46e1-973c-0699b7fda7ca">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Cyprus"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Cyprus Community Reports"/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
@@ -196,56 +196,66 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 	<group name="Group1" isStartNewPage="true" keepTogether="true">
 		<groupExpression><![CDATA[$F{BPARTNER_CODE}]]></groupExpression>
 		<groupHeader>
-			<band height="130">
+			<band height="96">
 				<staticText>
-					<reportElement x="0" y="0" width="90" height="20" uuid="89a15095-847b-4916-9d7a-85473010fa29">
+					<reportElement x="0" y="0" width="90" height="15" uuid="89a15095-847b-4916-9d7a-85473010fa29">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<box leftPadding="2">
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
-						<font isBold="true"/>
+						<font size="10" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Employee Name :]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="0" y="20" width="50" height="40" uuid="17396330-efcf-4243-8f58-1ad758ecde75">
+					<reportElement x="0" y="15" width="50" height="30" uuid="17396330-efcf-4243-8f58-1ad758ecde75">
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</reportElement>
 					<box topPadding="2" leftPadding="2">
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Top">
-						<font isBold="true"/>
+						<font size="10" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Address :]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="0" y="60" width="25" height="20" uuid="9bf12bb3-e62d-4e51-93d1-0e20def6eb7f">
+					<reportElement x="0" y="45" width="25" height="15" uuid="9bf12bb3-e62d-4e51-93d1-0e20def6eb7f">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</reportElement>
 					<box leftPadding="2">
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
-						<font isBold="true"/>
+						<font size="10" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Tel :]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement x="25" y="60" width="255" height="20" uuid="0ebc11eb-50f4-4669-9e0c-83ff63e8edf4"/>
+					<reportElement x="25" y="45" width="255" height="15" uuid="0ebc11eb-50f4-4669-9e0c-83ff63e8edf4">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
 					<box>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
@@ -253,9 +263,12 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$F{ORG_PHONE}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement x="280" y="60" width="30" height="20" uuid="219a9faa-eeb4-4fe4-a7d5-c33b612a1033"/>
+					<reportElement x="280" y="45" width="30" height="15" uuid="219a9faa-eeb4-4fe4-a7d5-c33b612a1033">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
 					<box leftPadding="2">
-						<bottomPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
 					</box>
 					<textElement verticalAlignment="Middle">
 						<font isBold="true"/>
@@ -263,10 +276,14 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<text><![CDATA[Fax :]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement x="310" y="60" width="270" height="20" uuid="a56d11b9-f9ae-4d27-85db-f8e3fe5c0ccf"/>
+					<reportElement x="310" y="45" width="270" height="15" uuid="a56d11b9-f9ae-4d27-85db-f8e3fe5c0ccf">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
 					<box>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
@@ -274,15 +291,12 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$F{ORG_FAX}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement x="50" y="20" width="530" height="40" uuid="1c476b3b-3625-445c-82b9-0d748d40db7b">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					</reportElement>
+					<reportElement x="50" y="15" width="530" height="30" uuid="1c476b3b-3625-445c-82b9-0d748d40db7b"/>
 					<box topPadding="2" leftPadding="2">
-						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Top">
 						<font size="8"/>
@@ -290,13 +304,15 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$F{CUST_ADDRESS}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement x="90" y="0" width="490" height="20" uuid="9c256ed2-f0e2-422a-a9e4-e7ed97db03bd">
+					<reportElement x="90" y="0" width="490" height="15" uuid="9c256ed2-f0e2-422a-a9e4-e7ed97db03bd">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<box>
-						<topPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
@@ -304,67 +320,78 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$F{CUSTOMER_NAME}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement x="580" y="0" width="70" height="20" uuid="319987ad-ccfa-4aeb-8af1-9281c8cd7496">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<reportElement x="580" y="0" width="70" height="15" uuid="319987ad-ccfa-4aeb-8af1-9281c8cd7496">
 						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 					</reportElement>
 					<box leftPadding="2">
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
-						<font isBold="true"/>
+						<font size="10" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Account No. :]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="580" y="20" width="75" height="20" uuid="2ef368cd-58b9-4806-bab4-bf4cef4624ae">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<reportElement x="580" y="15" width="75" height="15" uuid="2ef368cd-58b9-4806-bab4-bf4cef4624ae">
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</reportElement>
 					<box leftPadding="2">
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
-						<font isBold="true"/>
+						<font size="10" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Sales Person :]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="580" y="40" width="65" height="20" uuid="00f198f7-ce95-4eb7-a76e-215686756162">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<reportElement x="580" y="30" width="65" height="15" uuid="00f198f7-ce95-4eb7-a76e-215686756162">
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</reportElement>
 					<box leftPadding="2">
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
-						<font isBold="true"/>
+						<font size="10" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Credit Limit :]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="580" y="60" width="85" height="20" uuid="fcb98779-53eb-4b5e-923c-671f9698b1f2">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<reportElement x="580" y="45" width="85" height="15" uuid="fcb98779-53eb-4b5e-923c-671f9698b1f2">
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</reportElement>
 					<box leftPadding="2">
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
-						<font isBold="true"/>
+						<font size="10" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Payment Terms :]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement x="645" y="40" width="505" height="20" uuid="8ba480a0-13ca-4174-ab0e-2c6766184a23"/>
+					<reportElement x="645" y="30" width="505" height="15" uuid="8ba480a0-13ca-4174-ab0e-2c6766184a23">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
 					<box>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
@@ -372,10 +399,15 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$F{SO_CREDITLIMIT}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement x="655" y="20" width="495" height="20" uuid="bdbdb7dd-0d96-41a3-812e-ce218afdc1de"/>
+					<reportElement x="655" y="15" width="495" height="15" uuid="bdbdb7dd-0d96-41a3-812e-ce218afdc1de">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
 					<box>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
@@ -383,11 +415,14 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$F{SALES_PERSON}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement x="650" y="0" width="500" height="20" uuid="67e19782-6375-4324-a9b0-295d8566cd32"/>
+					<reportElement x="650" y="0" width="500" height="15" uuid="67e19782-6375-4324-a9b0-295d8566cd32">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
 					<box>
-						<topPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
@@ -395,10 +430,15 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$F{BPARTNER_CODE}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement x="665" y="60" width="485" height="20" uuid="5e1a8211-eeac-45ed-b2e7-bce28a7baf0f"/>
+					<reportElement x="665" y="45" width="485" height="15" uuid="5e1a8211-eeac-45ed-b2e7-bce28a7baf0f">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
 					<box>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
 						<font size="8"/>
@@ -406,189 +446,192 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$F{PAYMENT_TERM}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement mode="Opaque" x="0" y="90" width="35" height="20" backcolor="#EBF3FC" uuid="3a1f5550-d0e6-4f04-9b2e-ab4e6a473f7d">
+					<reportElement mode="Opaque" x="0" y="65" width="35" height="15" backcolor="#EBF3FC" uuid="3a1f5550-d0e6-4f04-9b2e-ab4e6a473f7d">
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<box>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font isBold="true"/>
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Sr.No.]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="35" y="90" width="50" height="20" forecolor="#000000" backcolor="#EBF3FC" uuid="054c1fe2-932d-46b9-aeef-b2bc9ac37c4a">
+					<reportElement mode="Opaque" x="35" y="65" width="50" height="15" forecolor="#000000" backcolor="#EBF3FC" uuid="054c1fe2-932d-46b9-aeef-b2bc9ac37c4a">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cf9e3282-15eb-485b-a9cf-7a8a11e2bff2"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box leftPadding="2" rightPadding="3">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Date]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="85" y="90" width="50" height="20" forecolor="#000000" backcolor="#EBF3FC" uuid="d780768e-096a-4881-9402-d73a005216f7">
+					<reportElement mode="Opaque" x="85" y="65" width="50" height="15" forecolor="#000000" backcolor="#EBF3FC" uuid="d780768e-096a-4881-9402-d73a005216f7">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8cd2cc21-bc39-4a63-b7e9-eef35e39bf62"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box leftPadding="2" rightPadding="3">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Type]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="135" y="90" width="85" height="20" forecolor="#000000" backcolor="#EBF3FC" uuid="bfab45e8-0218-46e5-89a2-cde422f25803">
+					<reportElement mode="Opaque" x="135" y="65" width="85" height="15" forecolor="#000000" backcolor="#EBF3FC" uuid="bfab45e8-0218-46e5-89a2-cde422f25803">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="589a11c1-53f0-46af-be32-8d68fe1f4bb5"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box leftPadding="2" rightPadding="3">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Document No.]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="220" y="90" width="590" height="20" forecolor="#000000" backcolor="#EBF3FC" uuid="c6d41812-6761-415e-a3d3-dc82cb7ab3a2">
+					<reportElement mode="Opaque" x="220" y="65" width="590" height="15" forecolor="#000000" backcolor="#EBF3FC" uuid="c6d41812-6761-415e-a3d3-dc82cb7ab3a2">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="56045954-e437-4cf1-bca6-d240441b181e"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box leftPadding="2">
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box leftPadding="2" rightPadding="3">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Description]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="0" y="110" width="810" height="20" uuid="dfd65464-a328-4fac-b259-24bbfa2a207b">
+					<reportElement x="0" y="81" width="810" height="15" uuid="dfd65464-a328-4fac-b259-24bbfa2a207b">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
 					<box rightPadding="2">
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font isBold="true"/>
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Previous Balance]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="1100" y="90" width="50" height="20" forecolor="#000000" backcolor="#EBF3FC" uuid="0b340572-22aa-4996-8c77-9dbac4e9e7de">
+					<reportElement mode="Opaque" x="1100" y="65" width="50" height="15" forecolor="#000000" backcolor="#EBF3FC" uuid="0b340572-22aa-4996-8c77-9dbac4e9e7de">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd6fd9a0-61c0-4dd7-bb5e-c70bd47f5366"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box leftPadding="2" rightPadding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Paid Date]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="970" y="110" width="180" height="20" uuid="a46ed35d-d7da-4edd-b3c7-ff1a37606895"/>
-					<box>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<reportElement x="970" y="81" width="180" height="15" uuid="a46ed35d-d7da-4edd-b3c7-ff1a37606895">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="3">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<text><![CDATA[]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="1050" y="90" width="50" height="20" forecolor="#000000" backcolor="#EBF3FC" uuid="e151e416-d2cd-4c00-a5bd-341dc2b033db">
+					<reportElement mode="Opaque" x="1050" y="65" width="50" height="15" forecolor="#000000" backcolor="#EBF3FC" uuid="e151e416-d2cd-4c00-a5bd-341dc2b033db">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd6fd9a0-61c0-4dd7-bb5e-c70bd47f5366"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box leftPadding="2" rightPadding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Due Date]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="970" y="90" width="80" height="20" forecolor="#000000" backcolor="#EBF3FC" uuid="ab42a205-224c-4679-a8f5-7da6010ffddd">
+					<reportElement mode="Opaque" x="970" y="65" width="80" height="15" forecolor="#000000" backcolor="#EBF3FC" uuid="ab42a205-224c-4679-a8f5-7da6010ffddd">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box rightPadding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Balance]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="890" y="90" width="80" height="20" forecolor="#000000" backcolor="#EBF3FC" uuid="5f81cc71-42c8-48f1-af3d-024f0765d39a">
+					<reportElement mode="Opaque" x="890" y="65" width="80" height="15" forecolor="#000000" backcolor="#EBF3FC" uuid="5f81cc71-42c8-48f1-af3d-024f0765d39a">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5836e089-d366-4032-9f71-6b37a3ec8ee0"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box rightPadding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Credit]]></text>
 				</staticText>
 				<textField pattern="#,##0.00#;(#,##0.00#)" isBlankWhenNull="true">
-					<reportElement x="890" y="110" width="80" height="20" uuid="e3543f79-677c-4909-a2d7-9e5c106d9de6"/>
-					<box rightPadding="2">
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<reportElement x="890" y="81" width="80" height="15" uuid="e3543f79-677c-4909-a2d7-9e5c106d9de6">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box leftPadding="3" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="8" isBold="false"/>
@@ -596,12 +639,12 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$F{PREV_CREDIT}]]></textFieldExpression>
 				</textField>
 				<textField pattern="#,##0.00#;(#,##0.00#)" isBlankWhenNull="true">
-					<reportElement x="810" y="110" width="80" height="20" uuid="d6dda377-85d4-4533-9240-2ebf6a919ab1">
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					</reportElement>
-					<box rightPadding="2">
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<reportElement x="810" y="81" width="80" height="15" uuid="d6dda377-85d4-4533-9240-2ebf6a919ab1"/>
+					<box leftPadding="3" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="8" isBold="false"/>
@@ -609,19 +652,18 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$F{PREV_DEBIT}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement mode="Opaque" x="810" y="90" width="80" height="20" forecolor="#000000" backcolor="#EBF3FC" uuid="07d8a615-cc6d-4e63-a876-51e090d69a90">
+					<reportElement mode="Opaque" x="810" y="65" width="80" height="15" forecolor="#000000" backcolor="#EBF3FC" uuid="07d8a615-cc6d-4e63-a876-51e090d69a90">
 						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7c4b17c4-617e-4c3e-a27d-2769457887e5"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box rightPadding="2">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Debit]]></text>
 				</staticText>
@@ -630,70 +672,67 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 		<groupFooter>
 			<band height="55">
 				<staticText>
-					<reportElement mode="Transparent" x="810" y="15" width="80" height="20" forecolor="#000000" uuid="27bf10f5-b4fc-434c-bfc0-f3a3a728bb7d">
+					<reportElement mode="Transparent" x="810" y="15" width="80" height="15" forecolor="#000000" uuid="27bf10f5-b4fc-434c-bfc0-f3a3a728bb7d">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box>
+					<box rightPadding="2">
 						<pen lineColor="#000000"/>
-						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Total Debit]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="890" y="15" width="80" height="20" forecolor="#000000" uuid="ff08f173-bc40-4fd1-a46d-7d6cadd600b7">
+					<reportElement mode="Opaque" x="890" y="15" width="80" height="15" forecolor="#000000" uuid="ff08f173-bc40-4fd1-a46d-7d6cadd600b7">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
-					<box>
-						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<box rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Total Credit]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="970" y="15" width="80" height="20" forecolor="#000000" uuid="acbb7bf9-674d-4004-bc37-bc0f193ff42c">
+					<reportElement mode="Opaque" x="970" y="15" width="80" height="15" forecolor="#000000" uuid="acbb7bf9-674d-4004-bc37-bc0f193ff42c">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
-					<box>
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="9" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Total Net]]></text>
 				</staticText>
 				<textField pattern="#,##0.00#;(#,##0.00#)" isBlankWhenNull="true">
-					<reportElement mode="Opaque" x="970" y="35" width="80" height="20" forecolor="#000000" uuid="ae17f1f9-0ab0-4092-b31f-dfc4e3ccf77f">
+					<reportElement mode="Opaque" x="970" y="30" width="80" height="15" forecolor="#000000" uuid="ae17f1f9-0ab0-4092-b31f-dfc4e3ccf77f">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<box rightPadding="2">
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box leftPadding="3" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="8" isBold="false"/>
@@ -701,16 +740,15 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[($V{DEBIT1}.add($F{PREV_DEBIT}).subtract($V{CREDIT1}.add($F{PREV_CREDIT})))]]></textFieldExpression>
 				</textField>
 				<textField pattern="#,##0.00#;(#,##0.00#)" isBlankWhenNull="true">
-					<reportElement mode="Opaque" x="890" y="35" width="80" height="20" forecolor="#000000" uuid="240d8578-f54a-445c-880b-9837162e046a">
+					<reportElement mode="Opaque" x="890" y="30" width="80" height="15" forecolor="#000000" uuid="240d8578-f54a-445c-880b-9837162e046a">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
-					<box rightPadding="2">
-						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<box leftPadding="3" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="8" isBold="false"/>
@@ -718,16 +756,15 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 					<textFieldExpression><![CDATA[$V{CREDIT1}.add($F{PREV_CREDIT})]]></textFieldExpression>
 				</textField>
 				<textField pattern="#,##0.00#;(#,##0.00#)" isBlankWhenNull="true">
-					<reportElement mode="Opaque" x="810" y="35" width="80" height="20" forecolor="#000000" uuid="6968f856-c283-44ec-b7f0-7975bde68d6c">
+					<reportElement mode="Opaque" x="810" y="30" width="80" height="15" forecolor="#000000" uuid="6968f856-c283-44ec-b7f0-7975bde68d6c">
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
-						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
-					<box rightPadding="2">
-						<topPen lineWidth="1.0"/>
-						<leftPen lineWidth="1.0"/>
-						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+					<box leftPadding="1" rightPadding="2">
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="8" isBold="false"/>
@@ -741,120 +778,126 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="80" splitType="Stretch">
+		<band height="56" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField pattern="dd/MM/YYYY">
-				<reportElement x="1090" y="0" width="60" height="15" uuid="73aaab31-a5c7-44a7-9e28-cec56f0c1cee">
+				<reportElement x="1090" y="0" width="60" height="14" uuid="73aaab31-a5c7-44a7-9e28-cec56f0c1cee">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+				<box leftPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement verticalAlignment="Middle">
-					<font size="10" isBold="false"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement mode="Opaque" x="1030" y="0" width="60" height="15" forecolor="#000000" uuid="ce27a12a-d7c6-4cfd-8baf-7a40cd054a08">
+				<reportElement mode="Opaque" x="1030" y="0" width="60" height="14" forecolor="#000000" uuid="ce27a12a-d7c6-4cfd-8baf-7a40cd054a08">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box leftPadding="2">
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
+				<box leftPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Print Date :]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="1030" y="15" width="60" height="15" forecolor="#000000" uuid="b5aaaca6-82e5-415c-a2bf-3231403b5f38">
+				<reportElement mode="Opaque" x="1030" y="15" width="60" height="14" forecolor="#000000" uuid="b5aaaca6-82e5-415c-a2bf-3231403b5f38">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box leftPadding="2">
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+				<box leftPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Print Time :   ]]></text>
 			</staticText>
 			<textField pattern="hh:mm a">
-				<reportElement x="1090" y="15" width="60" height="15" uuid="3a8d3413-2225-44cd-890f-7fde675bf54e">
+				<reportElement x="1090" y="15" width="60" height="14" uuid="3a8d3413-2225-44cd-890f-7fde675bf54e">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+				<box leftPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement verticalAlignment="Middle">
-					<font size="10" isBold="false"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="60" width="1150" height="20" backcolor="#EBF3FC" uuid="2426759c-67f8-4ada-b552-ff114265f1c3">
+				<reportElement mode="Opaque" x="0" y="35" width="1150" height="20" backcolor="#EBF3FC" uuid="2426759c-67f8-4ada-b552-ff114265f1c3">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box leftPadding="5">
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Employee Ledger Report]]></text>
 			</staticText>
-			<image>
-				<reportElement x="0" y="20" width="100" height="35" uuid="1a3ca0bb-39c3-4180-8ee4-53018e41ebe0">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<imageExpression><![CDATA[$F{LOGO_TEXT}]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="70">
+		<band height="50">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement x="0" y="40" width="40" height="20" uuid="67594ad2-92eb-484f-81e4-cfe68b5041da"/>
+				<reportElement x="0" y="30" width="40" height="15" uuid="67594ad2-92eb-484f-81e4-cfe68b5041da">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<box leftPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Phone :]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement x="40" y="40" width="240" height="20" uuid="a2891f7f-69cb-43dd-a9be-d1aa169e5d66">
+				<reportElement x="40" y="30" width="240" height="15" uuid="a2891f7f-69cb-43dd-a9be-d1aa169e5d66">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
@@ -862,25 +905,34 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{ORG_PHONE}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="280" y="40" width="30" height="20" uuid="2a0c81a8-ed5d-404e-8f77-037a053eb770">
+				<reportElement x="280" y="30" width="30" height="15" uuid="2a0c81a8-ed5d-404e-8f77-037a053eb770">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Fax :]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement x="310" y="40" width="270" height="20" uuid="632915b7-373c-4639-a840-5d0a4b0d6e2c">
+				<reportElement x="310" y="30" width="270" height="15" uuid="632915b7-373c-4639-a840-5d0a4b0d6e2c">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8"/>
@@ -888,42 +940,49 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{ORG_FAX}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="20" width="75" height="20" uuid="90b85d5a-ac53-4a1d-9201-a7bf9f803bda">
+				<reportElement x="0" y="15" width="75" height="15" uuid="90b85d5a-ac53-4a1d-9201-a7bf9f803bda">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Acct. Schema :]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="0" width="70" height="20" uuid="91fb7637-c99e-46bd-a860-ef6bed1b6a0e">
+				<reportElement x="0" y="0" width="70" height="15" uuid="91fb7637-c99e-46bd-a860-ef6bed1b6a0e">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Organization :]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
-				<reportElement x="70" y="0" width="510" height="20" uuid="c9acb6bb-9d40-484a-b971-f9f002b73eb8">
+				<reportElement x="70" y="0" width="510" height="15" uuid="c9acb6bb-9d40-484a-b971-f9f002b73eb8">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box>
-					<topPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
@@ -931,14 +990,15 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{ORG_NAME}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="75" y="20" width="505" height="20" uuid="a029e98d-167e-4de8-8178-9a79bac78c3a">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				<reportElement x="75" y="15" width="505" height="15" uuid="a029e98d-167e-4de8-8178-9a79bac78c3a">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
@@ -946,36 +1006,48 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{ACCT_SCHEMA}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="580" y="0" width="70" height="20" uuid="a59594d9-3753-4a44-a6a0-e620f24349c3"/>
+				<reportElement x="580" y="0" width="70" height="15" uuid="a59594d9-3753-4a44-a6a0-e620f24349c3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
 				<box leftPadding="2">
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Org. Tax No. :]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="580" y="20" width="50" height="20" uuid="8437941f-8d0c-4d4e-910a-c8d977c23464">
+				<reportElement x="580" y="15" width="50" height="15" uuid="8437941f-8d0c-4d4e-910a-c8d977c23464">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Address :]]></text>
 			</staticText>
 			<textField pattern="dd/MM/YYYY">
-				<reportElement x="615" y="40" width="55" height="20" uuid="cd58a0ec-4bd7-4d30-8550-b52d36932b89">
+				<reportElement x="615" y="30" width="45" height="15" uuid="cd58a0ec-4bd7-4d30-8550-b52d36932b89">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
@@ -983,15 +1055,15 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$P{DateAcct1}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="630" y="20" width="520" height="20" uuid="0321eb5e-9235-4325-a34f-b7bd15fa8f03">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<reportElement x="630" y="15" width="520" height="15" uuid="0321eb5e-9235-4325-a34f-b7bd15fa8f03">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
@@ -999,11 +1071,14 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{ORG_ADDR}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="650" y="0" width="500" height="20" uuid="6d2a60a4-5bf7-4af6-9646-5e9cfdc9f6f6"/>
+				<reportElement x="650" y="0" width="500" height="15" uuid="6d2a60a4-5bf7-4af6-9646-5e9cfdc9f6f6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
 				<box>
-					<topPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8"/>
@@ -1011,10 +1086,15 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{TAXID}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd/MM/YYYY">
-				<reportElement x="680" y="40" width="470" height="20" uuid="28e8bbd5-babc-4ab4-9d85-cf0a82982419"/>
+				<reportElement x="670" y="30" width="480" height="15" uuid="28e8bbd5-babc-4ab4-9d85-cf0a82982419">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<box leftPadding="2">
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8"/>
@@ -1022,49 +1102,57 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$P{DateAcct2}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="580" y="40" width="35" height="20" uuid="df79a90e-97e4-4ee2-af8f-069dc271e0ce">
+				<reportElement x="580" y="30" width="35" height="15" uuid="df79a90e-97e4-4ee2-af8f-069dc271e0ce">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Date :]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="670" y="40" width="10" height="20" uuid="3797c5d2-f8ec-458e-ad2f-9c49c96dfae7">
+				<reportElement x="660" y="30" width="10" height="15" uuid="3797c5d2-f8ec-458e-ad2f-9c49c96dfae7">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="10" isBold="false"/>
+					<font size="8" isBold="false"/>
 				</textElement>
 				<text><![CDATA[-]]></text>
 			</staticText>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="15" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="1100" y="0" width="50" height="20" isPrintWhenDetailOverflows="true" uuid="68081261-731a-4377-ab3d-7cfea95f04e0">
+				<reportElement stretchType="RelativeToTallestObject" x="1100" y="0" width="50" height="15" isPrintWhenDetailOverflows="true" uuid="68081261-731a-4377-ab3d-7cfea95f04e0">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6a445f34-97eb-4d22-ab6a-c89b821b4892"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<box>
+				<box leftPadding="2" rightPadding="2">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="8"/>
@@ -1072,17 +1160,17 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{PAID_DATE}!=null?$F{PAID_DATE}:""]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="1050" y="0" width="50" height="20" isPrintWhenDetailOverflows="true" uuid="3749b7bc-d9db-4e49-874a-4349325003f1">
+				<reportElement stretchType="RelativeToTallestObject" x="1050" y="0" width="50" height="15" isPrintWhenDetailOverflows="true" uuid="3749b7bc-d9db-4e49-874a-4349325003f1">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bd6fd9a0-61c0-4dd7-bb5e-c70bd47f5366"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
-				<box>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+				<box leftPadding="2" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="8"/>
@@ -1090,15 +1178,16 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{DUEDATE}!=null?$F{DUEDATE}:""]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00#;(#,##0.00#)" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="970" y="0" width="80" height="20" isPrintWhenDetailOverflows="true" uuid="6c189c46-e500-4b16-b94f-60dabd2d6cab">
+				<reportElement stretchType="RelativeToTallestObject" x="970" y="0" width="80" height="15" isPrintWhenDetailOverflows="true" uuid="6c189c46-e500-4b16-b94f-60dabd2d6cab">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="10a4ab3c-0bb3-46af-948a-8baf685dc08a"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<box rightPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+				<box leftPadding="3" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="8"/>
@@ -1106,16 +1195,15 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{BALANCE}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00#;(#,##0.00#)" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="890" y="0" width="80" height="20" isPrintWhenDetailOverflows="true" uuid="e6f740c8-b8d3-490e-98f9-2824167b184b">
+				<reportElement stretchType="RelativeToTallestObject" x="890" y="0" width="80" height="15" isPrintWhenDetailOverflows="true" uuid="e6f740c8-b8d3-490e-98f9-2824167b184b">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f23590ae-2bd6-4b36-b321-ab9e973c58cb"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<box rightPadding="2">
+				<box leftPadding="3" rightPadding="2">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
@@ -1124,15 +1212,15 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{CREDIT}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00#;(#,##0.00#)" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="810" y="0" width="80" height="20" isPrintWhenDetailOverflows="true" uuid="ab5982d3-1a56-4263-b88f-eb129a691aa6">
+				<reportElement stretchType="RelativeToTallestObject" x="810" y="0" width="80" height="15" isPrintWhenDetailOverflows="true" uuid="ab5982d3-1a56-4263-b88f-eb129a691aa6">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d599cff7-fcbe-4563-83ef-5c05970fd8b2"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
-				<box rightPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+				<box leftPadding="3" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="8"/>
@@ -1140,16 +1228,17 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{DEBIT}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
-				<reportElement x="220" y="0" width="590" height="20" uuid="5d80b317-e180-4d1d-8248-284621a0c5fa">
+				<reportElement x="220" y="0" width="590" height="15" uuid="5d80b317-e180-4d1d-8248-284621a0c5fa">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="56045954-e437-4cf1-bca6-d240441b181e"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<box leftPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+				<box leftPadding="2" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="8"/>
@@ -1157,15 +1246,16 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{DESCRIPTION}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="135" y="0" width="85" height="20" isPrintWhenDetailOverflows="true" uuid="59f7f686-914b-4fe8-ac70-bdf16ac17374">
+				<reportElement stretchType="RelativeToTallestObject" x="135" y="0" width="85" height="15" isPrintWhenDetailOverflows="true" uuid="59f7f686-914b-4fe8-ac70-bdf16ac17374">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="589a11c1-53f0-46af-be32-8d68fe1f4bb5"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<box leftPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+				<box leftPadding="2" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="8"/>
@@ -1173,45 +1263,50 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA[$F{DOCUMENTNO}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="85" y="0" width="50" height="20" isPrintWhenDetailOverflows="true" uuid="0a781bd3-07bc-4953-a420-19bb78ad3250">
+				<reportElement stretchType="RelativeToTallestObject" x="85" y="0" width="50" height="15" isPrintWhenDetailOverflows="true" uuid="0a781bd3-07bc-4953-a420-19bb78ad3250">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8cd2cc21-bc39-4a63-b7e9-eef35e39bf62"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
-				<box>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+				<box rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
+				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DOCTYPE_NAME}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd/MM/YYYY" isBlankWhenNull="true">
-				<reportElement stretchType="RelativeToTallestObject" x="35" y="0" width="50" height="20" isPrintWhenDetailOverflows="true" uuid="6649e806-1178-4a6f-80c4-559e8b52413e">
+				<reportElement stretchType="RelativeToTallestObject" x="35" y="0" width="50" height="15" isPrintWhenDetailOverflows="true" uuid="6649e806-1178-4a6f-80c4-559e8b52413e">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cf9e3282-15eb-485b-a9cf-7a8a11e2bff2"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box leftPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+				<box leftPadding="2" rightPadding="3">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
+				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="SansSerif" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{DATEACCT}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="35" height="20" isPrintWhenDetailOverflows="true" uuid="dc76e8ff-65de-4b56-acf2-429e9a4bfd77">
+				<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="35" height="15" isPrintWhenDetailOverflows="true" uuid="dc76e8ff-65de-4b56-acf2-429e9a4bfd77">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="8"/>
@@ -1221,10 +1316,10 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="20" splitType="Stretch">
+		<band height="30" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField>
-				<reportElement x="480" y="0" width="100" height="20" uuid="f337d559-214f-4cc3-a0dc-ae7946f7df49">
+				<reportElement x="480" y="10" width="100" height="20" uuid="f337d559-214f-4cc3-a0dc-ae7946f7df49">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
@@ -1233,7 +1328,7 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="580" y="0" width="100" height="20" uuid="53f68b18-6a71-4f11-8506-d7559bbf1564">
+				<reportElement x="580" y="10" width="100" height="20" uuid="53f68b18-6a71-4f11-8506-d7559bbf1564">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
@@ -1246,95 +1341,100 @@ FN_GET_TOTAL_CREDIT('EMPLOYEE',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} )
 	<summary>
 		<band height="55">
 			<staticText>
-				<reportElement mode="Transparent" x="430" y="15" width="100" height="20" forecolor="#000000" uuid="539a1af9-284d-4850-9a4e-60b5a81776b0">
+				<reportElement mode="Transparent" x="430" y="15" width="100" height="15" forecolor="#000000" uuid="539a1af9-284d-4850-9a4e-60b5a81776b0">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box>
+				<box rightPadding="2">
 					<pen lineColor="#000000"/>
-					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Over All Debit]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="530" y="15" width="100" height="20" forecolor="#000000" uuid="62394dfc-38c6-45db-9da8-2eb05a7e7a58">
+				<reportElement mode="Opaque" x="530" y="15" width="100" height="15" forecolor="#000000" uuid="62394dfc-38c6-45db-9da8-2eb05a7e7a58">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+				<box rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Over All Credit]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="630" y="15" width="100" height="20" forecolor="#000000" uuid="c90107dc-985c-4c4c-a5b0-794c05630071">
+				<reportElement mode="Opaque" x="630" y="15" width="100" height="15" forecolor="#000000" uuid="c90107dc-985c-4c4c-a5b0-794c05630071">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
-				<box>
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+				<box rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="12" isBold="true"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Over All Net]]></text>
 			</staticText>
 			<textField pattern="#,##0.00#;(#,##0.00#)" isBlankWhenNull="true">
-				<reportElement mode="Opaque" x="630" y="35" width="100" height="20" forecolor="#000000" uuid="8c9a1611-471c-482a-99b6-866e8b6f113b">
+				<reportElement mode="Opaque" x="630" y="30" width="100" height="15" forecolor="#000000" uuid="8c9a1611-471c-482a-99b6-866e8b6f113b">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<box rightPadding="2">
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+				<box leftPadding="3" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OVERALLDEBIT}.subtract($F{OVERALLCREDIT})]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement x="530" y="35" width="100" height="20" uuid="eeb1f860-45da-428a-be39-8706f963d04f"/>
-				<box rightPadding="2">
-					<bottomPen lineWidth="1.0"/>
+				<reportElement x="530" y="30" width="100" height="15" uuid="eeb1f860-45da-428a-be39-8706f963d04f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="3" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OVERALLCREDIT}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00#;(#,##0.00#)" isBlankWhenNull="true">
-				<reportElement x="430" y="35" width="100" height="20" uuid="83be31ca-dbbd-4b03-9a6b-6e115de93e5c"/>
-				<box rightPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+				<reportElement x="430" y="30" width="100" height="15" uuid="83be31ca-dbbd-4b03-9a6b-6e115de93e5c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box leftPadding="1" rightPadding="2">
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+					<font size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{OVERALLDEBIT}]]></textFieldExpression>
 			</textField>

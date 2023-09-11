@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CustomerAgeingDetail" pageWidth="1041" pageHeight="842" orientation="Landscape" columnWidth="1001" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fe66c65e-0a07-4243-be21-13bf11b76462">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Cyprus"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Cyprus Community Reports"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
@@ -212,6 +212,10 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 		<property name="com.jaspersoft.studio.field.name" value="DATEACCT_END"/>
 		<property name="com.jaspersoft.studio.field.label" value="DATEACCT_END"/>
 	</field>
+	<field name="ENGLISHIMAGEPATH" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ENGLISHIMAGEPATH"/>
+		<property name="com.jaspersoft.studio.field.label" value="ENGLISHIMAGEPATH"/>
+	</field>
 	<field name="CREATED" class="java.sql.Timestamp">
 		<property name="com.jaspersoft.studio.field.name" value="CREATED"/>
 		<property name="com.jaspersoft.studio.field.label" value="CREATED"/>
@@ -224,32 +228,35 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="80" splitType="Stretch">
+		<band height="56" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement mode="Opaque" x="880" y="0" width="60" height="15" forecolor="#000000" uuid="a0f2be51-1a15-4587-ad09-c7f3c6032407">
+				<reportElement mode="Opaque" x="880" y="0" width="60" height="14" forecolor="#000000" uuid="a0f2be51-1a15-4587-ad09-c7f3c6032407">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Print Date :]]></text>
 			</staticText>
 			<textField pattern="dd/MM/YYYY">
-				<reportElement x="940" y="0" width="60" height="15" uuid="45cee4f4-7471-4533-bb68-5226b6cab713">
+				<reportElement x="940" y="0" width="60" height="14" uuid="45cee4f4-7471-4533-bb68-5226b6cab713">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box leftPadding="5">
-					<topPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
@@ -257,15 +264,17 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<textField pattern="hh:mm a">
-				<reportElement x="940" y="15" width="60" height="15" uuid="70340587-e49c-4aae-ac71-c94bb04fbe44">
+				<reportElement x="940" y="15" width="60" height="14" uuid="70340587-e49c-4aae-ac71-c94bb04fbe44">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box leftPadding="5">
-					<topPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
@@ -273,97 +282,93 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement mode="Opaque" x="880" y="15" width="60" height="15" forecolor="#000000" uuid="9d0fd230-22b8-4a8d-b506-6e32e9193526">
+				<reportElement mode="Opaque" x="880" y="15" width="60" height="14" forecolor="#000000" uuid="9d0fd230-22b8-4a8d-b506-6e32e9193526">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font size="10" isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Print Time :   ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="0" y="60" width="1000" height="20" backcolor="#EBF3FC" uuid="ec3fde24-d986-4eeb-8bc3-167d80f38869">
+				<reportElement mode="Opaque" x="0" y="35" width="1000" height="20" backcolor="#EBF3FC" uuid="ec3fde24-d986-4eeb-8bc3-167d80f38869">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box leftPadding="5">
 					<topPen lineWidth="1.0"/>
-					<leftPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
 					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Customer Ageing Detail Report]]></text>
 			</staticText>
-			<image>
-				<reportElement x="0" y="20" width="100" height="35" uuid="695b604b-26e9-42a2-b529-dc18b22a96ca">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-				<imageExpression><![CDATA[$F{LOGO_TEXT}]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="70" splitType="Stretch">
+		<band height="50" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<staticText>
-				<reportElement x="0" y="0" width="70" height="20" uuid="606d1c3c-bed9-42b4-a6c2-5f3d549dccb8">
+				<reportElement mode="Transparent" x="0" y="0" width="70" height="15" uuid="606d1c3c-bed9-42b4-a6c2-5f3d549dccb8">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Organization :]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="20" width="65" height="20" uuid="96944929-93fa-421f-a6a6-69d751309723">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<reportElement mode="Transparent" x="0" y="15" width="65" height="15" uuid="96944929-93fa-421f-a6a6-69d751309723">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Date As On :]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="40" width="80" height="20" uuid="a38f6cf5-dc74-47d3-8df6-e730cb0482d0">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<reportElement mode="Transparent" x="0" y="30" width="80" height="15" uuid="a38f6cf5-dc74-47d3-8df6-e730cb0482d0">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<leftPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Ageing Bucket :]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="80" y="40" width="420" height="20" uuid="9f615069-747b-40a5-b661-17b2384a5a47">
+				<reportElement mode="Transparent" x="80" y="30" width="420" height="15" uuid="9f615069-747b-40a5-b661-17b2384a5a47">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8"/>
@@ -371,13 +376,16 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 				<textFieldExpression><![CDATA[$F{BUCKET_NAME}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd/MM/yyyy">
-				<reportElement mode="Opaque" x="65" y="20" width="435" height="20" uuid="982b001a-fff3-4bd0-bd64-6b2d3a5f0ced">
+				<reportElement mode="Transparent" x="65" y="15" width="435" height="15" uuid="982b001a-fff3-4bd0-bd64-6b2d3a5f0ced">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box>
-					<topPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8"/>
@@ -385,11 +393,14 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 				<textFieldExpression><![CDATA[$P{DateAcct_Start}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="70" y="0" width="430" height="20" uuid="ab20c6b6-e347-4383-987c-3d24d547dc4b"/>
+				<reportElement mode="Transparent" x="70" y="0" width="430" height="15" uuid="ab20c6b6-e347-4383-987c-3d24d547dc4b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
 				<box>
-					<topPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8"/>
@@ -397,47 +408,54 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 				<textFieldExpression><![CDATA[$P{AD_Org_ID}.intValue()==9999999?"ALL":$F{ORG_NAME}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="500" y="0" width="60" height="20" uuid="88e3066a-4d92-460c-94eb-c2a87ea1b891">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<reportElement mode="Transparent" x="500" y="0" width="60" height="15" uuid="88e3066a-4d92-460c-94eb-c2a87ea1b891">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<bottomPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[B. Partner :]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="500" y="20" width="55" height="20" uuid="8e090c3b-a681-44c5-aef1-3b3e76757a90">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<reportElement mode="Transparent" x="500" y="15" width="55" height="15" uuid="8e090c3b-a681-44c5-aef1-3b3e76757a90">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<bottomPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[BP Group :]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="500" y="40" width="70" height="20" uuid="09ee91f0-bf25-4b4a-b300-c1abd49bc37d">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<reportElement mode="Transparent" x="500" y="30" width="70" height="15" uuid="09ee91f0-bf25-4b4a-b300-c1abd49bc37d">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<bottomPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
-					<font isBold="true"/>
+					<font size="9" isBold="true"/>
 				</textElement>
 				<text><![CDATA[A/C Schema :]]></text>
 			</staticText>
 			<textField>
-				<reportElement mode="Opaque" x="570" y="40" width="430" height="20" uuid="ab92c1fa-51e7-4a6d-9186-231567371a92"/>
+				<reportElement mode="Transparent" x="570" y="30" width="430" height="15" uuid="ab92c1fa-51e7-4a6d-9186-231567371a92">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<box>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8"/>
@@ -445,11 +463,15 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 				<textFieldExpression><![CDATA[$F{ACCT_NAME}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="555" y="20" width="445" height="20" uuid="1079ff5a-78b2-4294-9c2f-533cd0c910a7"/>
+				<reportElement mode="Transparent" x="555" y="15" width="445" height="15" uuid="1079ff5a-78b2-4294-9c2f-533cd0c910a7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<box>
-					<topPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8"/>
@@ -457,11 +479,14 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 				<textFieldExpression><![CDATA[$P{C_BP_Group_ID}.intValue()==9999999?"ALL":$F{BPGROUP_NAME}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="560" y="0" width="440" height="20" uuid="aa5c4c75-82df-4ef0-9db5-30ae0624219c"/>
+				<reportElement mode="Transparent" x="560" y="0" width="440" height="15" uuid="aa5c4c75-82df-4ef0-9db5-30ae0624219c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
 				<box>
-					<topPen lineWidth="1.0"/>
-					<bottomPen lineWidth="1.0"/>
-					<rightPen lineWidth="1.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
 				</box>
 				<textElement verticalAlignment="Middle">
 					<font size="8"/>
@@ -517,9 +542,9 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 							</reportElement>
 							<box leftPadding="2">
 								<topPen lineWidth="1.0"/>
-								<leftPen lineWidth="1.0"/>
+								<leftPen lineWidth="0.0"/>
 								<bottomPen lineWidth="1.0"/>
-								<rightPen lineWidth="1.0"/>
+								<rightPen lineWidth="0.0"/>
 							</box>
 							<textElement verticalAlignment="Middle">
 								<font isBold="true"/>
@@ -538,9 +563,9 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 								<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="0" width="100" height="20" isPrintWhenDetailOverflows="true" uuid="4f1ba199-23ea-4edf-b6ca-8f9224f2e51c"/>
 								<box leftPadding="2">
 									<topPen lineWidth="1.0"/>
-									<leftPen lineWidth="1.0"/>
-									<bottomPen lineWidth="1.0"/>
-									<rightPen lineWidth="1.0"/>
+									<leftPen lineWidth="0.0"/>
+									<bottomPen lineWidth="0.0"/>
+									<rightPen lineWidth="0.0"/>
 								</box>
 								<textElement verticalAlignment="Middle">
 									<font size="8"/>
@@ -554,10 +579,10 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 							<staticText>
 								<reportElement x="0" y="0" width="200" height="20" uuid="49c7b0b8-7b88-4134-aca9-25d7d6bbf7b7"/>
 								<box rightPadding="2">
-									<topPen lineWidth="1.0"/>
-									<leftPen lineWidth="1.0"/>
-									<bottomPen lineWidth="1.0"/>
-									<rightPen lineWidth="1.0"/>
+									<topPen lineWidth="0.0"/>
+									<leftPen lineWidth="0.0"/>
+									<bottomPen lineWidth="0.0"/>
+									<rightPen lineWidth="0.0"/>
 								</box>
 								<textElement textAlignment="Right" verticalAlignment="Middle"/>
 								<text><![CDATA[Total ]]></text>
@@ -575,9 +600,9 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 								<reportElement mode="Opaque" x="0" y="0" width="100" height="20" uuid="8a02217a-d7b1-4e83-8fd5-a91d7e78582a"/>
 								<box leftPadding="2">
 									<topPen lineWidth="1.0"/>
-									<leftPen lineWidth="1.0"/>
-									<bottomPen lineWidth="1.0"/>
-									<rightPen lineWidth="1.0"/>
+									<leftPen lineWidth="0.0"/>
+									<bottomPen lineWidth="0.0"/>
+									<rightPen lineWidth="0.0"/>
 								</box>
 								<textElement verticalAlignment="Middle">
 									<font size="8"/>
@@ -605,9 +630,9 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 								<reportElement mode="Opaque" x="0" y="0" width="100" height="30" backcolor="#EBF3FC" uuid="2f67e280-8138-47ac-ae8c-c457e0103823"/>
 								<box leftPadding="0" rightPadding="2">
 									<topPen lineWidth="1.0"/>
-									<leftPen lineWidth="1.0"/>
+									<leftPen lineWidth="0.0"/>
 									<bottomPen lineWidth="1.0"/>
-									<rightPen lineWidth="1.0"/>
+									<rightPen lineWidth="0.0"/>
 								</box>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<font isBold="true"/>
@@ -634,9 +659,9 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 							<reportElement mode="Opaque" x="0" y="0" width="100" height="20" uuid="9b7a3198-460a-46bf-9064-b5125ced8ec8"/>
 							<box leftPadding="0" rightPadding="2">
 								<topPen lineWidth="1.0"/>
-								<leftPen lineWidth="1.0"/>
-								<bottomPen lineWidth="1.0"/>
-								<rightPen lineWidth="1.0"/>
+								<leftPen lineWidth="0.0"/>
+								<bottomPen lineWidth="0.0"/>
+								<rightPen lineWidth="0.0"/>
 							</box>
 							<textElement textAlignment="Right" verticalAlignment="Middle">
 								<font size="8"/>
@@ -674,10 +699,10 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 						<textField pattern="#,##0.00#;(#,##0.00#)">
 							<reportElement x="0" y="0" width="100" height="20" uuid="ad153d1f-8899-4a0f-ac74-02156fd4cf6c"/>
 							<box rightPadding="2">
-								<topPen lineWidth="1.0"/>
-								<leftPen lineWidth="1.0"/>
-								<bottomPen lineWidth="1.0"/>
-								<rightPen lineWidth="1.0"/>
+								<topPen lineWidth="0.0"/>
+								<leftPen lineWidth="0.0"/>
+								<bottomPen lineWidth="0.0"/>
+								<rightPen lineWidth="0.0"/>
 							</box>
 							<textElement textAlignment="Right" verticalAlignment="Middle">
 								<font isBold="true"/>
@@ -695,13 +720,6 @@ DATEINVOICED <=  $P{DateAcct_Start} AND
 					</cellContents>
 				</crosstabCell>
 			</crosstab>
-			<line>
-				<reportElement x="100" y="0" width="1" height="30" uuid="c5e32281-c2a7-4ddc-b63c-65c5a54b1556">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</line>
 		</band>
 	</summary>
 </jasperReport>

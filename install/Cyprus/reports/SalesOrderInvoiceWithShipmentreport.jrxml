@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 7.9.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalesOrderMarginReport" pageWidth="1191" pageHeight="842" orientation="Landscape" columnWidth="1151" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="7f8c7c0e-e7f1-48d9-8835-f743bbe51525">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="cyprus"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Cyprus Community Reports"/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
@@ -45,6 +45,10 @@ AND
 		<property name="com.jaspersoft.studio.field.name" value="AD_ORG_ID"/>
 		<property name="com.jaspersoft.studio.field.label" value="AD_ORG_ID"/>
 	</field>
+	<field name="LOGO_TEXT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="LOGO_TEXT"/>
+		<property name="com.jaspersoft.studio.field.label" value="LOGO_TEXT"/>
+	</field>
 	<field name="ORG_NAME" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="ORG_NAME"/>
 		<property name="com.jaspersoft.studio.field.label" value="ORG_NAME"/>
@@ -84,6 +88,14 @@ AND
 	<field name="C_BPARTNER_ID" class="java.math.BigDecimal">
 		<property name="com.jaspersoft.studio.field.name" value="C_BPARTNER_ID"/>
 		<property name="com.jaspersoft.studio.field.label" value="C_BPARTNER_ID"/>
+	</field>
+	<field name="C_ACTIVITY_ID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="C_ACTIVITY_ID"/>
+		<property name="com.jaspersoft.studio.field.label" value="C_ACTIVITY_ID"/>
+	</field>
+	<field name="ACTIVITY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ACTIVITY"/>
+		<property name="com.jaspersoft.studio.field.label" value="ACTIVITY"/>
 	</field>
 	<field name="VENDOR_CODE" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="VENDOR_CODE"/>
@@ -302,15 +314,6 @@ AND
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
-			<image>
-				<reportElement x="0" y="20" width="100" height="35" uuid="587f0cbe-158b-45ed-9e6e-1076d2f9cce2">
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
-				<imageExpression><![CDATA["C:/CyprusSoftware/Reports-logo.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>

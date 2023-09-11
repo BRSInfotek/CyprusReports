@@ -2,7 +2,7 @@
 <!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalesOrderSubReport" pageWidth="340" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="340" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1ea336fa-818d-483f-9101-6f9a0cf619fc">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Cyprus"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CyprusCommunity"/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
@@ -16,24 +16,13 @@
 		<defaultValueExpression><![CDATA[$P{C_Order_ID}]]></defaultValueExpression>
 	</parameter>
 	<queryString language="SQL">
-		<![CDATA[select ot.taxbaseamt as taxableamount,ta.rate, ta.name as tax,
--- ot.taxamt as taxamount,
-FN_GET_TAX_AMOUNT_CHILD(ot.taxbaseamt,ot.c_tax_id ) as taxamount
-,FN_GET_ROUNDED_CURRENCY(fn_get_grossamount(co.c_order_id),100) as GrossAmount,
-FN_GET_ROUNDED_CURRENCY((fn_get_grossamount(co.c_order_id)- fn_get_totaltaxableamount(co.c_order_id)),100) as TotalDiscount,
-FN_GET_ROUNDED_CURRENCY(fn_get_totaltaxableamount(co.c_order_id),100)  as TotalTaxableAmount,
-FN_GET_ROUNDED_CURRENCY(fn_get_totaltaxamount(co.c_order_id),100) as TotalTaxAmount,
-co.grandtotal as TotalInvoice,FN_GET_MONEY_TO_WORDS_V1(co.grandtotal,cc.iso_code,null) as WordsAmount,co.description as OrderDescription
+		<![CDATA[select ta.rate, ta.name as tax,ot.taxamt as taxamount
 from c_order co
-inner join c_ordertax ot on (co.c_order_id = ot.c_order_id)
-left outer join C_Currency cc on (cc.c_currency_id=co.c_currency_id)
-inner join c_tax ta on (ta.c_tax_id = ot.c_tax_id) where co.C_Order_ID =  $P{C_Order_ID}
+left  join c_ordertax ot on (co.c_order_id = ot.c_order_id)
+left  join c_tax ta on (ta.c_tax_id = ot.c_tax_id)
+where  co.C_Order_ID  =  $P{C_Order_ID} 
 order by ta.rate]]>
 	</queryString>
-	<field name="TAXABLEAMOUNT" class="java.math.BigDecimal">
-		<property name="com.jaspersoft.studio.field.name" value="TAXABLEAMOUNT"/>
-		<property name="com.jaspersoft.studio.field.label" value="TAXABLEAMOUNT"/>
-	</field>
 	<field name="RATE" class="java.math.BigDecimal">
 		<property name="com.jaspersoft.studio.field.name" value="RATE"/>
 		<property name="com.jaspersoft.studio.field.label" value="RATE"/>
@@ -45,34 +34,6 @@ order by ta.rate]]>
 	<field name="TAXAMOUNT" class="java.math.BigDecimal">
 		<property name="com.jaspersoft.studio.field.name" value="TAXAMOUNT"/>
 		<property name="com.jaspersoft.studio.field.label" value="TAXAMOUNT"/>
-	</field>
-	<field name="GROSSAMOUNT" class="java.math.BigDecimal">
-		<property name="com.jaspersoft.studio.field.name" value="GROSSAMOUNT"/>
-		<property name="com.jaspersoft.studio.field.label" value="GROSSAMOUNT"/>
-	</field>
-	<field name="TOTALDISCOUNT" class="java.math.BigDecimal">
-		<property name="com.jaspersoft.studio.field.name" value="TOTALDISCOUNT"/>
-		<property name="com.jaspersoft.studio.field.label" value="TOTALDISCOUNT"/>
-	</field>
-	<field name="TOTALTAXABLEAMOUNT" class="java.math.BigDecimal">
-		<property name="com.jaspersoft.studio.field.name" value="TOTALTAXABLEAMOUNT"/>
-		<property name="com.jaspersoft.studio.field.label" value="TOTALTAXABLEAMOUNT"/>
-	</field>
-	<field name="TOTALTAXAMOUNT" class="java.math.BigDecimal">
-		<property name="com.jaspersoft.studio.field.name" value="TOTALTAXAMOUNT"/>
-		<property name="com.jaspersoft.studio.field.label" value="TOTALTAXAMOUNT"/>
-	</field>
-	<field name="TOTALINVOICE" class="java.math.BigDecimal">
-		<property name="com.jaspersoft.studio.field.name" value="TOTALINVOICE"/>
-		<property name="com.jaspersoft.studio.field.label" value="TOTALINVOICE"/>
-	</field>
-	<field name="WORDSAMOUNT" class="java.lang.String">
-		<property name="com.jaspersoft.studio.field.name" value="WORDSAMOUNT"/>
-		<property name="com.jaspersoft.studio.field.label" value="WORDSAMOUNT"/>
-	</field>
-	<field name="ORDERDESCRIPTION" class="java.lang.String">
-		<property name="com.jaspersoft.studio.field.name" value="ORDERDESCRIPTION"/>
-		<property name="com.jaspersoft.studio.field.label" value="ORDERDESCRIPTION"/>
 	</field>
 	<background>
 		<band splitType="Stretch"/>
