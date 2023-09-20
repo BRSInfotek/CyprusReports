@@ -846,6 +846,7 @@ PAYMENT_TERM
 	<pageHeader>
 		<band height="50" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}.intValue() <= 1 ? new Boolean(true) : new Boolean(false)]]></printWhenExpression>
 			<staticText>
 				<reportElement x="0" y="0" width="70" height="15" uuid="2a8fc62f-f2ff-4ff3-b199-b11a0d3c0c7a">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>

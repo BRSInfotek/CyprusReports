@@ -914,6 +914,7 @@ FN_GET_TOTAL_CREDIT('VENDOR',To_Date( $P{DateAcct1}) ,To_Date( $P{DateAcct2} ), 
 	<pageHeader>
 		<band height="50">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER}.intValue() <= 1 ? new Boolean(true) : new Boolean(false)]]></printWhenExpression>
 			<staticText>
 				<reportElement x="0" y="0" width="70" height="15" uuid="5d0ae4c2-ce15-4f5e-b665-8c021b5fdab5">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>

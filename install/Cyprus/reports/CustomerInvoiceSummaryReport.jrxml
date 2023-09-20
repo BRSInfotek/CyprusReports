@@ -682,7 +682,7 @@ AND
 						<topPen lineWidth="1.0" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineColor="#000000"/>
 						<bottomPen lineWidth="1.0" lineColor="#000000"/>
-						<rightPen lineWidth="1.0" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="9" isBold="true"/>
@@ -698,7 +698,7 @@ AND
 						<topPen lineWidth="1.0" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineColor="#000000"/>
 						<bottomPen lineWidth="1.0" lineColor="#000000"/>
-						<rightPen lineWidth="1.0" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font size="9" isBold="true"/>
@@ -714,7 +714,7 @@ AND
 						<topPen lineWidth="1.0" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineColor="#000000"/>
 						<bottomPen lineWidth="1.0" lineColor="#000000"/>
-						<rightPen lineWidth="1.0" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font size="9" isBold="true"/>
@@ -730,7 +730,7 @@ AND
 						<topPen lineWidth="1.0" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineColor="#000000"/>
 						<bottomPen lineWidth="1.0" lineColor="#000000"/>
-						<rightPen lineWidth="1.0" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font size="9" isBold="true"/>
@@ -746,7 +746,7 @@ AND
 						<topPen lineWidth="1.0" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineColor="#000000"/>
 						<bottomPen lineWidth="1.0" lineColor="#000000"/>
-						<rightPen lineWidth="1.0" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="9" isBold="true"/>
@@ -816,7 +816,7 @@ AND
 					<box>
 						<topPen lineWidth="1.0"/>
 						<leftPen lineWidth="0.0"/>
-						<rightPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font size="9" isBold="true"/>
@@ -835,7 +835,7 @@ AND
 						<topPen lineWidth="0.0"/>
 						<leftPen lineWidth="0.0"/>
 						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="9" isBold="true"/>
@@ -852,7 +852,7 @@ AND
 						<topPen lineWidth="0.0"/>
 						<leftPen lineWidth="0.0"/>
 						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="9" isBold="true"/>
@@ -870,7 +870,7 @@ AND
 						<topPen lineWidth="0.0"/>
 						<leftPen lineWidth="0.0"/>
 						<bottomPen lineWidth="1.0"/>
-						<rightPen lineWidth="1.0"/>
+						<rightPen lineWidth="0.0"/>
 					</box>
 					<textElement textAlignment="Right" verticalAlignment="Middle">
 						<font size="9" isBold="true"/>
@@ -1344,9 +1344,8 @@ AND
 				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="1090" y="21" width="60" height="15" uuid="19162e9f-c613-461a-a428-403f829b9a94">
+				<reportElement x="1090" y="20" width="60" height="15" uuid="19162e9f-c613-461a-a428-403f829b9a94">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box>
 					<topPen lineWidth="1.0"/>
@@ -1358,9 +1357,7 @@ AND
 				<text><![CDATA[]]></text>
 			</staticText>
 			<textField pattern="#,##0.00###;(#,##0.00###)" isBlankWhenNull="true">
-				<reportElement x="1000" y="21" width="90" height="15" uuid="cd621643-3f65-4693-9652-c30b382eaba3">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+				<reportElement x="1000" y="20" width="90" height="15" uuid="cd621643-3f65-4693-9652-c30b382eaba3"/>
 				<box rightPadding="2">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -1373,9 +1370,7 @@ AND
 				<textFieldExpression><![CDATA[$V{REMAMT_BASE22}.add($F{PREV_BAL})]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00###;(#,##0.00###)" isBlankWhenNull="true">
-				<reportElement x="910" y="21" width="90" height="15" uuid="c38510fb-4c07-4e07-b7fc-f52d23897a5b">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+				<reportElement x="910" y="20" width="90" height="15" uuid="c38510fb-4c07-4e07-b7fc-f52d23897a5b"/>
 				<box rightPadding="2">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -1387,9 +1382,7 @@ AND
 				</textElement>
 			</textField>
 			<textField pattern="#,##0.00###;(#,##0.00###)" isBlankWhenNull="true">
-				<reportElement x="820" y="21" width="90" height="15" uuid="6f7798ad-0d64-435e-bd8c-861ec29949b0">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+				<reportElement x="820" y="20" width="90" height="15" uuid="6f7798ad-0d64-435e-bd8c-861ec29949b0"/>
 				<box rightPadding="2">
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1402,9 +1395,7 @@ AND
 				<textFieldExpression><![CDATA[$V{GRANDTOTAL_BASE1}.add($F{PREV_BAL})]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00###;(#,##0.00###)" isBlankWhenNull="true">
-				<reportElement x="730" y="21" width="90" height="15" uuid="a8b63bb2-e3f4-4b03-aca3-5cbd66df0248">
-					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-				</reportElement>
+				<reportElement x="730" y="20" width="90" height="15" uuid="a8b63bb2-e3f4-4b03-aca3-5cbd66df0248"/>
 				<box rightPadding="2">
 					<topPen lineWidth="1.0"/>
 					<leftPen lineWidth="0.0"/>
@@ -1416,7 +1407,7 @@ AND
 				</textElement>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="21" width="730" height="15" uuid="50d9a90b-3ac8-406d-8d14-79b33897a041">
+				<reportElement x="0" y="20" width="730" height="15" uuid="50d9a90b-3ac8-406d-8d14-79b33897a041">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>

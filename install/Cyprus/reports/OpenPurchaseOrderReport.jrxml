@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OpenPurchaseOrderReport" pageWidth="1191" pageHeight="842" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aa8e3c42-c3b2-4bf3-8575-0800b0766fc1">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Cyprus Community Reports"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CyprusCommunity"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<parameter name="AD_Client_ID" class="java.math.BigDecimal"/>
 	<parameter name="C_AcctSchema_ID" class="java.math.BigDecimal"/>
@@ -385,7 +385,7 @@ from  V_OPEN_PURCHASEORDER
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font size="10"/>
+					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{PRINTDATE}]]></textFieldExpression>
 			</textField>
@@ -419,7 +419,7 @@ from  V_OPEN_PURCHASEORDER
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font size="10" isBold="false"/>
+					<font size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
@@ -448,7 +448,7 @@ from  V_OPEN_PURCHASEORDER
 		<band height="35" splitType="Stretch">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<frame>
-				<reportElement x="0" y="0" width="1150" height="32" uuid="4b37b80f-92ef-42f5-b592-441fec0fecbb">
+				<reportElement x="0" y="0" width="1150" height="30" uuid="4b37b80f-92ef-42f5-b592-441fec0fecbb">
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -494,7 +494,7 @@ from  V_OPEN_PURCHASEORDER
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{AD_Org_ID} .intValue() ==9999999 ? "ALL" :$F{ORGANIZATION_NAME}]]></textFieldExpression>
 				</textField>
@@ -517,9 +517,8 @@ from  V_OPEN_PURCHASEORDER
 					<text><![CDATA[Product Category :]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="730" y="16" width="32" height="15" forecolor="#000000" uuid="edf6b103-8e05-46d3-83a2-58cd51b8de98">
+					<reportElement mode="Opaque" x="730" y="15" width="32" height="15" forecolor="#000000" uuid="edf6b103-8e05-46d3-83a2-58cd51b8de98">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
 					<box leftPadding="2">
@@ -546,11 +545,13 @@ from  V_OPEN_PURCHASEORDER
 						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement verticalAlignment="Middle"/>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
 					<textFieldExpression><![CDATA[$P{M_Product_Category_ID}.intValue() == 9999999 ? "ALL":$F{PROD_CAT_NAME}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement mode="Opaque" x="0" y="16" width="68" height="15" forecolor="#000000" uuid="c33c7b8b-70c9-47c0-afe5-849894c0e32f">
+					<reportElement mode="Opaque" x="0" y="15" width="68" height="15" forecolor="#000000" uuid="c33c7b8b-70c9-47c0-afe5-849894c0e32f">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
@@ -568,8 +569,7 @@ from  V_OPEN_PURCHASEORDER
 					<text><![CDATA[A/C Schema :]]></text>
 				</staticText>
 				<staticText>
-					<reportElement mode="Opaque" x="370" y="16" width="48" height="15" forecolor="#000000" uuid="06134257-bc28-4798-a880-80adb5164612">
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<reportElement mode="Opaque" x="370" y="15" width="48" height="15" forecolor="#000000" uuid="06134257-bc28-4798-a880-80adb5164612">
 						<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
@@ -602,9 +602,8 @@ from  V_OPEN_PURCHASEORDER
 					<text><![CDATA[BP Group :]]></text>
 				</staticText>
 				<textField isBlankWhenNull="true">
-					<reportElement x="68" y="16" width="302" height="15" uuid="6d173908-f79d-4946-abcc-1c18e833095b">
+					<reportElement x="68" y="15" width="302" height="15" uuid="6d173908-f79d-4946-abcc-1c18e833095b">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
@@ -615,13 +614,12 @@ from  V_OPEN_PURCHASEORDER
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font size="9" isBold="false"/>
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{ACCT_SCHEMA}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
-					<reportElement x="418" y="16" width="312" height="15" uuid="078b5c1c-2185-409b-b21b-964e72a473c1">
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<reportElement x="418" y="15" width="312" height="15" uuid="078b5c1c-2185-409b-b21b-964e72a473c1">
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
@@ -632,7 +630,7 @@ from  V_OPEN_PURCHASEORDER
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font size="9" isBold="false"/>
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{C_Activity_ID}.intValue() ==9999999 ? "ALL" :$F{ACTIVITY}]]></textFieldExpression>
 				</textField>
@@ -649,14 +647,13 @@ from  V_OPEN_PURCHASEORDER
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font size="9" isBold="false"/>
+						<font size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{C_BP_Group_ID}.intValue() ==9999999 ? "ALL" :$F{BP_GROUPNAME}]]></textFieldExpression>
 				</textField>
 				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
-					<reportElement x="762" y="16" width="63" height="15" uuid="b3f2013d-4758-40d7-94d3-30ad9639bd30">
+					<reportElement x="762" y="15" width="63" height="15" uuid="b3f2013d-4758-40d7-94d3-30ad9639bd30">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
@@ -667,15 +664,14 @@ from  V_OPEN_PURCHASEORDER
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{DateFrom}]]></textFieldExpression>
 				</textField>
 				<staticText>
-					<reportElement mode="Opaque" x="825" y="16" width="20" height="15" forecolor="#000000" uuid="4344cf6e-67e7-4a6e-ac9f-317344cc1f74">
+					<reportElement mode="Opaque" x="825" y="15" width="20" height="15" forecolor="#000000" uuid="4344cf6e-67e7-4a6e-ac9f-317344cc1f74">
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					</reportElement>
 					<box leftPadding="2">
@@ -685,14 +681,13 @@ from  V_OPEN_PURCHASEORDER
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left" verticalAlignment="Middle">
-						<font size="10" isBold="true"/>
+						<font size="8" isBold="true"/>
 					</textElement>
 					<text><![CDATA[-]]></text>
 				</staticText>
 				<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
-					<reportElement x="845" y="16" width="305" height="15" uuid="bada0296-1959-40b9-b229-e40a62bd840d">
+					<reportElement x="845" y="15" width="305" height="15" uuid="bada0296-1959-40b9-b229-e40a62bd840d">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
-						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					</reportElement>
@@ -703,7 +698,7 @@ from  V_OPEN_PURCHASEORDER
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement verticalAlignment="Middle">
-						<font size="9"/>
+						<font size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{DateTo}]]></textFieldExpression>
 				</textField>
@@ -936,7 +931,7 @@ from  V_OPEN_PURCHASEORDER
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -951,7 +946,7 @@ from  V_OPEN_PURCHASEORDER
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<box rightPadding="2">
-					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -967,7 +962,7 @@ from  V_OPEN_PURCHASEORDER
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<box rightPadding="2">
-					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -987,7 +982,7 @@ from  V_OPEN_PURCHASEORDER
 				<box>
 					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -1001,7 +996,7 @@ from  V_OPEN_PURCHASEORDER
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box rightPadding="2">
-					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1017,7 +1012,7 @@ from  V_OPEN_PURCHASEORDER
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<box rightPadding="2">
-					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -1033,7 +1028,7 @@ from  V_OPEN_PURCHASEORDER
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<box rightPadding="2">
-					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
